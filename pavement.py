@@ -7,7 +7,7 @@ install_distutils_tasks()
 
 options(
     setup=Bunch(
-        name="moksha.metrics",
+        name="mdemos.metrics",
         version="0.1",
         release="1",
         url="http://moksha.fedorahosted.org",
@@ -19,21 +19,23 @@ options(
         rpm_name='moksha-metrics',
         packages=find_packages(),
         package_data=find_package_data(),
-        namespace_packages=['moksha', 'moksha.apps'],
-        install_requires=["Moksha"],
+        namespace_packages=['mdemos'],
+        install_requires=[
+            "moksha>=0.7.0a",
+        ],
         entry_points={
             'moksha.stream': (
-                'moksha_metrics = moksha.apps.metrics.streams:MokshaMetricsProducer',
+                'moksha_metrics = mdemos.metrics.streams:MokshaMetricsProducer',
             ),
             'moksha.consumer': (
-                'moksha_message_metrics = moksha.apps.metrics.consumers:MokshaMessageMetricsConsumer',
+                'moksha_message_metrics = mdemos.metrics.consumers:MokshaMessageMetricsConsumer',
             ),
             'moksha.widget': (
                 ### Commented out from the tw1/tw2 config conversion
-                #'MokshaTW2CPUUsageWidget = moksha.apps.metrics.widgets:MokshaTW2CPUUsageWidget',
-                'MokshaMemoryUsageWidget = moksha.apps.metrics.widgets:MokshaMemoryUsageWidget',
-                'MokshaCPUUsageWidget = moksha.apps.metrics.widgets:MokshaCPUUsageWidget',
-                'MokshaMessageMetricsWidget = moksha.apps.metrics.widgets:MokshaMessageMetricsWidget',
+                #'MokshaTW2CPUUsageWidget = mdemos.metrics.widgets:MokshaTW2CPUUsageWidget',
+                'MokshaMemoryUsageWidget = mdemos.metrics.widgets:MokshaMemoryUsageWidget',
+                'MokshaCPUUsageWidget = mdemos.metrics.widgets:MokshaCPUUsageWidget',
+                'MokshaMessageMetricsWidget = mdemos.metrics.widgets:MokshaMessageMetricsWidget',
             ),
             'moksha.global': (
                 'moksha_socket = moksha.api.widgets:moksha_socket',
