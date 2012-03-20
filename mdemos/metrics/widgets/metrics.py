@@ -25,7 +25,7 @@ Moksha's memory and CPU usage.
 .. moduleauthor:: Luke Macken <lmacken@redhat.com>
 """
 
-from uuid import uuid4
+import uuid
 
 import tw.jquery.ui
 import tw.jquery.flot
