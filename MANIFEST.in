@@ -1,0 +1,3 @@
+include *.txt
+include *.rst
+recursive-include mdemos/metrics/widgets/templates *
