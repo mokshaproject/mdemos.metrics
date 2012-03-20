@@ -66,7 +66,7 @@ class MokshaMessageMetricsWidget(LiveFlotWidget):
     - display the latency
     """
     name = 'Message Metrics'
-    template = "mako:moksha.apps.metrics.widgets.templates.metrics"
+    template = "mako:mdemos.metrics.widgets.templates.metrics"
     onmessage = """
         if (json == 'done') {
             avg = accum / (NUM_MESSAGES * 1.0);
