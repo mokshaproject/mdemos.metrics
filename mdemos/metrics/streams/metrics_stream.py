@@ -42,7 +42,7 @@ class MokshaMetricsProducer(PollingProducer):
     poll_for_new_pids = False
 
     def __init__(self, hub):
-        if not asbool(config.get('moksha.metrics_stream', False)):
+        if not asbool(config.get('mdemos.metrics.stream', False)):
             log.info('Moksha Metrics Stream disabled')
             return
         self.programs = self._find_programs()
