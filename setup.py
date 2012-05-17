@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name="mdemos.metrics",
-    version="0.1.0",
+    version="0.1.1",
     release="1",
     url="http://moksha.fedorahosted.org",
     description="Moksha Metrics App",
@@ -35,7 +35,7 @@ setup(
             'MokshaMessageMetricsWidget = mdemos.metrics.widgets:MokshaMessageMetricsWidget',
         ),
         'moksha.global': (
-            'moksha_socket = moksha.api.widgets:moksha_socket',
+            'moksha_socket = moksha.api.widgets:get_moksha_socket',
         ),
     }
 )
