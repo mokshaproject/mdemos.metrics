@@ -27,9 +27,6 @@ Moksha's memory and CPU usage.
 
 import uuid
 
-import tw.jquery.ui
-import tw.jquery.flot
-
 import tw2.jqplugins.flot
 import tw2.excanvas
 

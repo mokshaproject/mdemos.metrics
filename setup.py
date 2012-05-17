@@ -20,7 +20,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "moksha>=0.7.0a",
+        "moksha>=0.7",
     ],
     entry_points={
         'moksha.stream': (
