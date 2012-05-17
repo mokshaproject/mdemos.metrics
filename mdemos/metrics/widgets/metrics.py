@@ -25,6 +25,7 @@ Moksha's memory and CPU usage.
 .. moduleauthor:: Luke Macken <lmacken@redhat.com>
 """
 
+import tg
 import uuid
 
 import tw2.jqplugins.flot
@@ -41,6 +42,7 @@ class MokshaMemoryUsageWidget(LiveFlotWidget):
     container_options = {
             'icon': 'chart.png', 'top': 400, 'left': 80, 'height': 325,
             }
+    backend = tg.config.get('moksha.livesocket.backend')
 
 
 class MokshaCPUUsageWidget(LiveFlotWidget):
@@ -49,6 +51,7 @@ class MokshaCPUUsageWidget(LiveFlotWidget):
     container_options = {
             'icon': 'chart.png', 'top': 80, 'left': 80, 'height': 325,
             }
+    backend = tg.config.get('moksha.livesocket.backend')
 
 
 class MokshaMessageMetricsWidget(LiveFlotWidget):
@@ -64,6 +67,7 @@ class MokshaMessageMetricsWidget(LiveFlotWidget):
     """
     name = 'Message Metrics'
     template = "mako:mdemos.metrics.widgets.templates.metrics"
+    backend = tg.config.get('moksha.livesocket.backend')
     onmessage = """
         if (json == 'done') {
             avg = accum / (NUM_MESSAGES * 1.0);

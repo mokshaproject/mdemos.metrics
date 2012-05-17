@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name="mdemos.metrics",
-    version="0.1.1",
+    version="0.1.2",
     release="1",
     url="http://moksha.fedorahosted.org",
     description="Moksha Metrics App",
