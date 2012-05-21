@@ -18,7 +18,6 @@ import os
 import logging
 import subprocess
 
-from tg import config
 from paste.deploy.converters import asbool
 
 from moksha.lib.helpers import defaultdict
@@ -42,7 +41,7 @@ class MokshaMetricsProducer(PollingProducer):
     poll_for_new_pids = False
 
     def __init__(self, hub):
-        if not asbool(config.get('mdemos.metrics.stream', False)):
+        if not asbool(hub.config.get('mdemos.metrics.stream', False)):
             log.info('Moksha Metrics Stream disabled')
             return
         self.programs = self._find_programs()
