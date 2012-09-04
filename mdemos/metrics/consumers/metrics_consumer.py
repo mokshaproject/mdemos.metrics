@@ -19,7 +19,7 @@ Moksha Metrics Consumer
 .. moduleauthor:: Luke Macken <lmacken@redhat.com>
 """
 
-from moksha.api.hub import Consumer
+from moksha.hub.api import Consumer
 
 class MokshaMessageMetricsConsumer(Consumer):
     """

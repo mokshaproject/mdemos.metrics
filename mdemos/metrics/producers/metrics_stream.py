@@ -18,10 +18,9 @@ import os
 import logging
 import subprocess
 
-from paste.deploy.converters import asbool
-
-from moksha.lib.helpers import defaultdict
-from moksha.api.hub.producer import PollingProducer
+from moksha.common.lib.helpers import defaultdict
+from moksha.common.lib.converters import asbool
+from moksha.hub.api.producer import PollingProducer
 
 log = logging.getLogger('moksha.hub')
 

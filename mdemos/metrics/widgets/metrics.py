@@ -32,8 +32,8 @@ import tw2.jqplugins.flot
 import tw2.excanvas
 
 
-from moksha.api.widgets.flot import LiveFlotWidget
-from moksha.api.widgets.buttons import buttons_css
+from moksha.wsgi.widgets.api.flot import LiveFlotWidget
+from moksha.wsgi.widgets.api.buttons import buttons_css
 
 
 class MokshaMemoryUsageWidget(LiveFlotWidget):

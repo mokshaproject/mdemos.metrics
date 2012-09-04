@@ -1,4 +1,4 @@
-<%namespace name="tw" module="moksha.utils.mako"/>
+<%namespace name="tw" module="tw2.core.mako_util"/>
 Messages sent: <span id="metrics_msg_sent">0</span><br/>
 <div id="metrics_sent_progress"></div>
 Messages received: <span id="metrics_msg_recv">0</span><br/>

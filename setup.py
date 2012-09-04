@@ -7,8 +7,7 @@ except ImportError:
 
 setup(
     name="mdemos.metrics",
-    version="0.1.3",
-    release="1",
+    version="1.0.0",
     url="http://moksha.fedorahosted.org",
     description="Moksha Metrics App",
     long_description="",
@@ -27,7 +26,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "moksha>=0.7",
+        "moksha.hub",
+        "moksha.wsgi",
     ],
     entry_points={
         'moksha.producer': (
@@ -42,7 +42,7 @@ setup(
             'MokshaMessageMetricsWidget = mdemos.metrics.widgets:MokshaMessageMetricsWidget',
         ),
         'moksha.global': (
-            'moksha_socket = moksha.api.widgets:get_moksha_socket',
+            'moksha_socket = moksha.wsgi.widgets.api:get_moksha_socket',
         ),
     }
 )
